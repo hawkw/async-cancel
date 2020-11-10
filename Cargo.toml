@@ -1,0 +1,19 @@
+[package]
+name = "async-cancel"
+version = "0.1.0"
+authors = ["Eliza Weisman <eliza@buoyant.io>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[dependencies]
+tokio = { version = "0.3", features = ["sync", "stream"] }
+pin-project-lite = "0.1"
+tracing = { version = "0.1", optional = true }
+
+[dev-dependencies]
+tokio = { version = "0.3", features = ["sync", "stream", "macros"]}
+tokio-test = "0.3"
+tracing = "0.1"
+tracing-subscriber = "0.2"
